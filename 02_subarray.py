@@ -1,0 +1,23 @@
+# arr = [2,4,5,7,8,9]
+# k=12
+# print("The first second index of the subarray are:  ")
+
+def sub_array(arr,k):
+    n = len(arr)
+    sum = 0
+    left = 0
+    for right in range(n):
+        sum += arr[right]
+        while sum >k and right>=left:
+            sum -= arr[left]
+            left += 1
+        if sum == k :
+            return [left +1 ,right +1]
+    return [-1]
+arr = list(map(int,input('Enter the numbers  : ').split()))      #[2,4,5,7,8,9]
+k  =  int(input('Enter a number :'))
+result = sub_array(arr,k)
+if result != [-1]:
+    print("The first second index of the subarray are:  ",result)
+else:
+    print("No subarray exists.",result)

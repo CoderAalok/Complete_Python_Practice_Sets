@@ -1,0 +1,4 @@
+Score : mice = 1 
+	 Canva = 0
+
+Hi-Score = 0
