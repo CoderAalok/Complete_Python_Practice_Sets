@@ -387,22 +387,22 @@
 
 # To finding the Longest Subarray with Sum K, for all negative or non-negative
 
-# def longest_subarray(arr, k):
-#     len_arr = len(arr)
-#     sub = 0
-#     max_len = 0
-#     prefix_arr = {} #empty dictionary
-#     for i in range(len_arr):
-#         sub += arr[i]
-#         if sub == k:
-#             max_len = max(max_len , i+1)
-#         #Differecne of current_sum with existing sum , to check already exist in prefix_map(dictionary)
-#         if (sub-k) in prefix_arr:
-#             max_len = max(max_len , i-prefix_arr[sub-k]) # Difference current index and (key its value)
-#         #if  not sub in prefix then to storing current index with that sub
-#         if sub not in prefix_arr:
-#             prefix_arr[sub] = i  # Adding on dictionay current_sum (key) and current_index (value)
-#     return max_len
-# print(longest_subarray([10,-50,80,-25,5,-40 ],60))
+def longest_subarray(arr, k):
+    len_arr = len(arr)
+    sub = 0
+    max_len = 0
+    prefix_arr = {} #empty dictionary
+    for i in range(len_arr):
+        sub += arr[i]
+        if sub == k:
+            max_len = max(max_len , i+1)
+        #Differecne of current_sum with existing sum , to check already exist in prefix_map(dictionary)
+        if (sub-k) in prefix_arr:
+            max_len = max(max_len , i-prefix_arr[sub-k]) # Difference current index and (key its value)
+        #if  not sub in prefix then to storing current index with that sub
+        if sub not in prefix_arr:
+            prefix_arr[sub] = i  # Adding on dictionay current_sum (key) and current_index (value)
+    return max_len
+print(longest_subarray([10,-50,80,-25,5,-40 ],60))
 
 
