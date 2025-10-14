@@ -121,7 +121,7 @@
 
 #7.To check if given array is Monotonic
 
-#>>>extend(): combine or concatenate two lists
+#>>>extend(): combine or concatenate two or more lists
 
 # def monotonic(arr1): 
 #     arr1.sort()
@@ -153,9 +153,9 @@
 # print(f" Monotonic array of decreasing order {monotonic([5,3,3,2])}")
 # print(f" Monotonic array of increasing order {monotonic([2,4,6,8,10])}")
 # print(monotonic([9,7,5,3]))
-    
-#8.Interchange first and last elements in a list
 
+
+#8.Interchange first and last elements in a list
 # def inter(arr):
 #     q = arr[0:-1]
 #     z = arr[-1: ]
@@ -387,22 +387,77 @@
 
 # To finding the Longest Subarray with Sum K, for all negative or non-negative
 
-def longest_subarray(arr, k):
-    len_arr = len(arr)
-    sub = 0
-    max_len = 0
-    prefix_arr = {} #empty dictionary
-    for i in range(len_arr):
-        sub += arr[i]
-        if sub == k:
-            max_len = max(max_len , i+1)
-        #Differecne of current_sum with existing sum , to check already exist in prefix_map(dictionary)
-        if (sub-k) in prefix_arr:
-            max_len = max(max_len , i-prefix_arr[sub-k]) # Difference current index and (key its value)
-        #if  not sub in prefix then to storing current index with that sub
-        if sub not in prefix_arr:
-            prefix_arr[sub] = i  # Adding on dictionay current_sum (key) and current_index (value)
-    return max_len
-print(longest_subarray([10,-50,80,-25,5,-40 ],60))
+# def longest_subarray(arr, k):
+#     len_arr = len(arr)
+#     sub = 0
+#     max_len = 0
+#     prefix_arr = {} #empty dictionary
+#     for i in range(len_arr):
+#         sub += arr[i]
+#         if sub == k:
+#             max_len = max(max_len , i+1)
+#         #Differecne of current_sum with existing sum , to check already exist in prefix_map(dictionary)
+#         if (sub-k) in prefix_arr:
+#             max_len = max(max_len , i-prefix_arr[sub-k]) # Difference current index and (key its value)
+#         #if  not sub in prefix then to storing current index with that sub
+#         if sub not in prefix_arr:
+#             prefix_arr[sub] = i  # Adding on dictionay current_sum (key) and current_index (value)
+#     return max_len
+# print(longest_subarray([10,-50,80,-25,5,-40 ],60))
 
 
+
+# Give an array to find whether given array is monotonic or not
+
+# arr = [3,4,4,55,80]
+# count = 0
+# if all(arr[i-1] <= arr[i] for i in range(1,len(arr)) or (all(arr[i-1] >= arr[i] for i in range(1,len(arr))))):
+#     count = True
+# else:
+#     count = False
+# print(count)
+
+# arr  = [6,9,9,3,2,1,1]
+# # count , count1 = 0,0
+# count = count1 = True
+
+# for i in range(1,len(arr)):   #O(n)
+#     if arr[i] > arr[i-1]:  # increasing order  log(n)
+#         count1 = False
+#     elif  arr[i] < arr[i-1]:  #decreasing order
+#         count = False
+# # for i in range(1, len(arr)):
+# #     if arr[i] <= arr[i-1]:
+# #         count1 += 1
+# if count or count1:
+# # if count == len(arr)-1 or count1 == len(arr)-1:
+#     print("Monotonic")
+# else:
+#     print('no monotonic')
+
+
+def monotonic_subarray(arr):
+    inc = dec = 1
+    max_no = 1
+    start = end = 0
+    for i in range(1,len(arr)):
+        if arr[i] > arr[i-1]:
+            inc += 1
+            dec = 1
+        elif arr[i] < arr[i-1]:
+            dec += 1
+            inc = 1
+        else:
+            inc = dec =1
+    #     max_arr = max(max_arr, inc, dec)
+    # return max_arr
+        if inc > dec :
+            max_no = inc
+            start = i - max_no +1
+            end  = i +1
+        if inc < dec :
+            max_no = inc
+            start = i - max_no +1
+            end  =  i + 1
+    return len(arr[start : end])
+print(f" The Largest Monotonic Subarray of given array is {monotonic_subarray([1,2,4,0,5,6,7,8])}")

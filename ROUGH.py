@@ -12,11 +12,15 @@
 
 # a = [1,2,3,4,5]
 # print(a[-2:])
-
-i = 0
-while i<=10:
-    i += 1
-    if i == 3:
-        continue  # skip all value and execute the loop 
-    print(i)
+# 
+# i = 0
+# while i<=10:
+#     i += 1
+#     if i == 3:
+#         continue  # skip all value and execute the loop 
+#     print(i)
     
+# q = [1,3,4,5,[1,3,4,5]]
+# a = [1,3,4,5]
+# if a in q :
+#     print('True')
