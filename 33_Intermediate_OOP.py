@@ -109,3 +109,143 @@
 # temp = Temperature(40,212)
 # temp.get_Celsius()  #Temperature.get_Celsius(temp)
 # temp.get_Fahrenheit()  #Temperature.get_Fahrenheit(temp) 
+
+
+#BankAccount Simulator
+import captcha
+class Account:
+    def __init__(self):
+        self.balance = 0.0
+
+    def get_deposit(self):
+
+        while True:
+            try:
+                deposit = float(input("How much do you need to deposit? >> "))
+            except ValueError:
+                print("❌ Invalid input. Please tryagain!")
+                continue
+
+            if deposit <= 0:
+                print("❌ Invalid input. Please tryagain!")
+                continue
+
+            self.balance += deposit
+            print("--------------------------------------")
+            print(f"Successully deposit Rs.{deposit}.")
+            print("--------------------------------------")
+            print(f"Your Current balance is Rs.{self.balance}.")
+            print("--------------------------------------")
+            break
+
+    def get_withdraw(self):
+        i = 1
+        max_time = 5
+        while i <= max_time:
+            try:
+                withdraw = int(input("How much do you want to withdraw? >> "))
+            except ValueError:
+                print("❌ Invalid input. Please tryagain!")
+                i += 1
+                continue
+
+            if withdraw > self.balance:
+                print("⚠️ Insufficient your bank balance!")
+                i += 1
+                continue
+            
+            if withdraw < 1000:
+                print("⚠️ Minimum money must be Rs.1000+ ")
+                i += 1
+                continue
+
+            self.balance -= withdraw
+            print("--------------------------------------")
+            print(f"\n✅Successfully Withdraw Rs.{withdraw}.")
+            print("--------------------------------------")
+            print(f"Your current bank balance: Rs.{self.balance}.")
+            print("--------------------------------------")
+            return True
+
+        if i > max_time:
+            print("\n Multiple attempt! your account temporarily paused!")
+        return False
+    
+    def get_balance(self):
+        print("--------------------------------------")
+        print(f"🏦Your current bank balance is {self.balance}.")
+        print("--------------------------------------")
+
+Encryption = {}
+while True:
+    name = input("Your Name: ")  # key
+    if  not name :
+        print("Name required!")
+        continue
+    break
+
+while True:
+    account_no = (input("Your Account_No.: "))  #value
+
+    if len(account_no) != 16 or not account_no.isdigit():
+            print("Account No. must be 16-digits...")
+            continue
+    break
+while True:
+    pin = (input("Your PIN-Code: "))  #value
+    if len(pin) != 4 or not pin.isdigit():
+            print("PIN Code must 4-digits...")
+            continue
+    break
+
+Encryption[name] = ("Account_No.:",account_no,"PIN Code:",pin)
+while True:
+    confirm = input(f"Are you sure about your info: Name:{Encryption} (Yes/No) ").lower()
+    if confirm == '' or not isinstance(confirm,str) :
+         print("Either (Yes/No) only.")
+         continue
+    break
+
+if confirm == 'yes':
+    while True:
+        Captcha = captcha.captcha_gen()
+        captcha_verification = input(f"To fill this captcha '{Captcha}' -->>: ")
+        if captcha_verification == '' or captcha_verification != Captcha:
+            print("Must fill correctly...")
+            continue
+        break
+
+    print("Successfully your account open.......")
+    bank = Account()
+
+    while True:
+        try:
+            user = int(input("What do you want:\n 1.Balance Check\n 2.Deposit\n 3.Withdraw\n 4.Exit ----> "))
+        except ValueError:
+            print("Invaild input!")
+            continue
+
+        if user == 1:
+            bank.get_balance()
+            continue
+
+        elif user == 2:
+            bank.get_deposit()
+            bank.get_balance()
+            continue
+
+        elif user == 3:
+           if bank.get_withdraw():
+                bank.get_balance()
+           continue
+
+        elif user == 4:
+            print("Thanks for Banking with us!")
+            break
+
+        else:
+            print("Out of range! Pick: 1-4")
+            continue
+
+else:
+    print("Make sure about your information and re-input!")

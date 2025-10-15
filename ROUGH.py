@@ -24,3 +24,13 @@
 # a = [1,3,4,5]
 # if a in q :
 #     print('True')
+
+# import captcha
+# print(captcha.captcha_gen())
+
+# a = 'retrieval'
+# if isinstance(a,str):
+#     print("yes")
+
+print(len("12312"))
+print('123'.isdigit())
