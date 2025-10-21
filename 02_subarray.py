@@ -14,8 +14,8 @@ def sub_array(arr,k):
         if sum == k :
             return [left +1 ,right +1]
     return [-1]
-arr = list(map(int,input('Enter the numbers  : ').split()))      #[2,4,5,7,8,9]
-k  =  int(input('Enter a number :'))
+arr = [3,2,3,4]#list(map(int,input('Enter the numbers  : ').split()))      #[2,4,5,7,8,9]
+k  =  6#int(input('Enter a number :'))
 result = sub_array(arr,k)
 if result != [-1]:
     print("The first second index of the subarray are:  ",result)
