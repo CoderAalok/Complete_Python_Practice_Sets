@@ -17,7 +17,7 @@
 # for i in range(1 , num+1):
 #     n1 , n2 = n2 , n1+n2
 #     fibo.append(n1)
-# print(f'The fibonacii series of given nummber {num} is : {fibo})
+# print(f'The fibonacii sxeries of given nummber {num} is : {fibo})
 
 
 #Approach of fibonacci's series

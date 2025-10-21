@@ -36,5 +36,16 @@
 #     q = file.replace(file,file1)
 # with open(q)as f:
 #     print(f.read())
-    
 
+# user = input("Enter your Name: ")
+# with open("guest.txt",'w')as file:
+    
+#     file.write(user)
+
+i = 1
+while i <=3:
+    user = input(f"{i}. Why did you like Python Programming Language only: ")
+    with open("like.txt",'a')as file:
+        file.write(f"\n{user}")
+    i += 1
+    

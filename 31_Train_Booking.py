@@ -8,8 +8,8 @@ class Train:
 
     #Distination chose
     def get_place(self):
-            for i in self.place:
-                if i  in ['jaynagar' , 'janakpur','kolkata','delhi','panjab','japan']:
+            # for i in self.place:
+                if self.place.lower()  in ['jaynagar' , 'janakpur','kolkata','delhi','panjab','japan']:
                     place_hold = input("From which station are you pickup the train? >>> ").lower().strip()
                     if  place_hold in  ['jaynagar' , 'janakpur','kolkata','delhi','panjab','japan']:
                         return True
@@ -18,7 +18,7 @@ class Train:
                         return False
                 else:
                     print("Sorry sir! Hanuman Nepal Train only goes ['Jaynagar' , 'Janakpur','kolkata','delhi','panjab','japan'] these places.")
-            return False
+                return False
 
     def get_name_ticket_seats_fare(self):
         net_ticket = 0
@@ -53,7 +53,7 @@ class Train:
                         if select not in self.seats:
                             print(f"Sorry sir! Seat_No. {select} is not available right now!.")
                             continue
-                                                    
+
                     except ValueError:
                         print("Typing Mistake! <Tryaging!>")
                         continue
@@ -62,8 +62,7 @@ class Train:
                         self.seats.remove(select)
                         count = True
                     break
-                
-            
+
             while True:
                 #Ticket Cancelation process
                 choice = input("Please conform this ticket for furter process? Cancel: (Yes or  No): >>>    ").lower().strip()
@@ -94,7 +93,7 @@ class Train:
                                     print(f"Cancelled! Ticket: {j} , seat: {cancel_1} ")
                                     break
                 elif choice  == 'no':
-                    print("Okay! your both ticket and seat has been confomed. ")
+                    print("Okay! your tickets and seats are confomed. ")
                 else:
                     print("Default input type!")
                     continue
@@ -116,7 +115,7 @@ class Train:
                     print("Seat booking process failed.")
 
                 print("\t\t ***** Ticket Booked Details ******\n")
-                print(f"\t\t Name: {self.name}\n\t\t No. of Tickets: {net_ticket}\n\t\t Ticket_No.: {sold_ticket},\n\t\t Seat_No.: {seats_book}\n\t\t Place: {self.place}\n\t\t Fare: {net_amount}")
+                print(f"\t\t Name: {(self.name).title()}\n\t\t No. of Tickets: {len(sold_ticket)}\n\t\t Ticket_No.: {sold_ticket},\n\t\t Seat_No.: {seats_book}\n\t\t Place: {(self.place)}\n\t\t Fare: {net_amount}")
                 print()
                 break
 
@@ -127,7 +126,7 @@ print("____*Welcome To Hanuman Nepal Railway Station*____")
 print()
 name = input("Ticket resister by >>> ")
 while True:
-    place = input("Where do you want to go? >>> ").lower().split()
+    place = input("Where do you want to go? >>> ").title()
     
     seats = [1,2,3]  #Available seats 
     tickets = [1,2,3] #Availale tickets
