@@ -6,7 +6,7 @@ def twice(final):
         val = random.randint(1,100)
         val_1 = val
         try:
-            user = int(input(f" ->Take ({val}) and 1.Add or 2.Subtract or 3.Show Result -> "))
+            user = int(input(f" ->Take ({val}) and 1.Add or 2.Subtract or 3.Skip and Show Result -> "))
             if user == 1:
                 result += val_1
                 continue
@@ -21,29 +21,30 @@ def twice(final):
                 print("🆒: I say choose either 1, 2, or 3 only!")
 
         except ValueError:
-            print("😧 Choose only 1, 2, or 3")
+            print("😶‍🌫️ Choose only 1, 2, or 3")
 
 def Guess_Number(num):
     result = 0
     if not num.isdigit():
-        print(">>❌ Input type is missing!")
+        print(">>❌ Invalid valid input!")
 
+    # length measure of number
     digit_size = len(num)
     if not digit_size in (2,3):
-        print("\n⚠️Hey my fellow, Only 2-digits or 3-digits guess🙂‍↕️.")
+        print("\n⚠️ Hey my fellow, Only 2-digits or 3-digits guess 🙂‍↕️.")
         return
 
     print("\nNow '⏪' reverse it's digits...")
     rev_num = num[::-1] #1
-    input("\nIf you reversed '⏪'-> Say:'Done'✅ : ").lower().strip()
+    input("\nIf you reversed '⏪'-> Say:'Done'✅ : ").capitalize().strip()
 
     print(">>\nNow '➖' subtract: (reversed_number) and (your guessed_number) number...")
     diff = abs(int(rev_num) - int(num)) #2
-    input("\nIf you subtracted '➖'-> Say:'Done'✅: ").lower().strip()
+    input("\nIf you subtracted '➖'-> Say:'Done'✅: ").capitalize().strip()
 
     print(">>\nNow again '⏪' reverse subtracted' number...")
     rev_diff = int(str(diff)[::-1]) #3
-    input("\nIf you reversed '⏪'-> Say:'Done'✅: ").lower().strip()
+    input("\nIf you reversed '⏪'-> Say:'Done'✅: ").capitalize().strip()
     
 
     print("\n>>Let's see the result...🤩")
@@ -55,17 +56,17 @@ def Guess_Number(num):
         rev_ = int(new_result[::-1])
         result = rev_ + int(new_result)
 
-    print(">>....\nWait!🤔 Before see the result")
+    print(">>....\nWait! Wait!! Wait!!!🤔 Before see the result")
     outcome = twice(result)
     return outcome
 
 # Starting to guess
 num = input("🧏 Guess a number in your mind (2-digits) or (3-digits):\n")
 
-input("\nIf you guessed. -> Say: 👍'Done' :  ").lower().strip()
+input("\nIf you guessed. -> Say: 👍'Done' :  ").capitalize().strip()
 print(f"\n🥴 So, Is your calculated value is {Guess_Number(num)}?")
 
-user_feedback = input("\nIf yes! 💬 Say:'Yes': ").lower().strip()
+user_feedback = input("\nIf yes! 💬 Say:'Yes': ").capitalize().strip()
 if user_feedback == 'yes':
     print("\nThanks! For playing 😎.")
 else:
