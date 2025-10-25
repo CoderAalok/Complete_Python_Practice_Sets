@@ -75,5 +75,17 @@ li = [4,5,8,3,1,2]
 # print(len('                                    '))
 
 
-i = (['rag']).title()
-print(i)
+# i = (['rag']).title()
+# print(i)
+# a = {2,2,3,4,5}
+# b = {5,2,6,7,4}
+# print(b^a)
+
+# a = 40
+# a = abs(a)
+# print(int((str(a))[::-1]))
+
+import random
+s = random.randint(0,100)
+a = s
+print(a,s)
