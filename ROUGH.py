@@ -85,7 +85,17 @@ li = [4,5,8,3,1,2]
 # a = abs(a)
 # print(int((str(a))[::-1]))
 
-import random
-s = random.randint(0,100)
-a = s
-print(a,s)
+# import random
+# s = random.randint(0,100)
+# a = s
+# print(a,s)
+
+# a = {1}
+# list(a)[0] = 5
+# print()
+
+# a = 50.00//2
+# print(a)
+
+from cap.Guess import run
+run()

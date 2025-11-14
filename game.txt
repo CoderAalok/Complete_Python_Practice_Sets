@@ -1,2 +1,2 @@
-Score : jack = 1 
+Score : ppop = 1 
 	  Canva = 0

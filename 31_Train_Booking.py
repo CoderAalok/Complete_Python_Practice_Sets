@@ -30,7 +30,7 @@ class Train:
                 #Pre-Ticket booking
                 ticket_no = int(input("How many Tickets do you need? >>> "))
                 if ticket_no <=0 or ticket_no > len(self.tickets):
-                    print("Please enter a valid input! ")
+                    print(f"Please enter 1 to {len(self.tickets)} ")
                     continue  #Repeat the iteration until the condition  become false
 
                 if net_ticket == 0:  #intial case
@@ -65,7 +65,7 @@ class Train:
 
             while True:
                 #Ticket Cancelation process
-                choice = input("Please conform this ticket for furter process? Cancel: (Yes or  No): >>>    ").lower().strip()
+                choice = input("Please conform this ticket for further process? Cancel: (Yes or  No): >>>    ").lower().strip()
                 if choice == 'yes':
                     cancel_ticket = int(input("How many tickets do you want to cancel: >>>  "))
                     if cancel_ticket > len(sold_ticket) or  cancel_ticket <= 0:
@@ -136,6 +136,3 @@ while True:
     if book.get_place():
         book.get_name_ticket_seats_fare()
     break
-
-
-

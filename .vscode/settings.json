@@ -12,5 +12,6 @@
     "git.rebaseWhenSync": true,
     "python.REPL.enableREPLSmartSend": false,
     "C_Cpp.default.compilerPath": "c:\\Users\\Lenovo\\OneDrive\\Desktop\\Complete_Python_Practice_Sets\\file.c",
-    
+    "editor.renderWhitespace": "none"
+
 }

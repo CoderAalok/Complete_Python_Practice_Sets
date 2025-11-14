@@ -27,7 +27,7 @@ def Guess_Number(num):
     result = 0
     if not num.isdigit():
         print(">>❌ Invalid valid input!")
-        return
+
     # length measure of number
     digit_size = len(num)
     if not digit_size in (2,3):
@@ -61,7 +61,7 @@ def Guess_Number(num):
     return outcome
 
 # Starting to guess
-num = input("🧏 Guess a number in your mind either (2-digits) or (3-digits):\n")
+num = input("🧏 Guess a number in your mind (2-digits) or (3-digits):\n")
 
 input("\nIf you guessed. -> Say: 👍'Done' :  ").capitalize().strip()
 print(f"\n🥴 So, Is your calculated value is {Guess_Number(num)}?")

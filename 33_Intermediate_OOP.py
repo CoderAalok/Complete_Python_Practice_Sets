@@ -30,7 +30,7 @@
 #         self.new = new_company
 #         self.conts = contact
 #     def info(self):         #Instance Attribute
-#         print("---------New Employee Information-------")
+#         print("---------New Employee Informations-------")
 #         print(f"Name: {self.name}")
 #         print(f"Salary: {self.salary}")
 #         print(f"Working On: {self.old} ")
@@ -63,7 +63,7 @@
 # # sphere.get_area()
 # # sphere.get_circumfrance()
         
-# #Question_9 
+# #Question_9 (Second hand Laptop sell)
 # class Laptop:
 #     def __init__(self,model,processor,ram, rom, screen, backlit,finger,price):
 #         self.model = model
@@ -75,7 +75,7 @@
 #         self.Finger = finger
 #         self.price = price
 #     def info(self):
-#         print("------HERE New Laptops With Exclusive Price-------")
+#         print("------HERE Second hand Laptops With Exclusive Price-------")
 #         print(f" Model: {self.model}")
 #         print(f"Processor: {self.Processor}")
 #         print(f"RAM: {self.RAM}")
@@ -198,7 +198,7 @@ while True:
             continue
     break
 
-Encryption[name] = ("Account_No.:",account_no,"PIN Code:",pin)
+Encryption[name] = ["Account_No.:",account_no,"PIN Code:",pin]
 while True:
     confirm = input(f"Are you sure about your info: Name:{Encryption} (Yes/No) ").lower()
     if confirm == '' or not isinstance(confirm,str) :
@@ -248,4 +248,4 @@ if confirm == 'yes':
             continue
 
 else:
-    print("Make sure about your information and re-input!")
+    print("Make ensure your information and re-input!")
