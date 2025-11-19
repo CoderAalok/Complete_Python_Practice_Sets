@@ -17,22 +17,16 @@
 
 
 
-class Workers:
-    salary1 = 500
-    salary2 = 1000
-    
-class Increment(Workers):
-    
-    # def get_salary(self,salary):
-    #     self.__class__.salary2 = salary
-    #     print(self.__class__.salary2)
-    
-    @classmethod
-    def get_salary(cls,salary):
-        cls.salary1 = salary
-        print(cls.salary1)
-        
-    
-obj = Increment()
-obj.get_salary(600)
-print(obj.salary1)
+
+
+
+"""
+add validation (e.g., age can’t be negative)
+
+hide internal implementation
+
+keep attribute syntax simple
+
+avoid breaking code when logic changes
+"""
+

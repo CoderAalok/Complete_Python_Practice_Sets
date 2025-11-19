@@ -1,15 +1,24 @@
+# find the Fibonacci series of n number.
+# It makes two sense, either the length of series equal to given number or last a digit less or equal to number
+
+
 #Method-1( "Range_fibonacii_series" != given number)
 
-# num = int(input("enter a number :"))
+# num = 10#int(input("enter a number :"))
 # n1 , n2 = 0 , 1
 # fibo = []
+
 # while n1 < num:
+    
 #     fibo.append(n1)
 #     n1 , n2 = n2 , n1+n2
-# print(f'The fibonacii series of given nummber {num} is : {fibo}')
+    
+# print(f'The fibonacii series of given nummber {num} is :',end=' ')
+# for i in fibo:
+#     print(i,end=' ')
 
 
-#Method-2 ( "Count_fibonacii_series" == given number)
+# Method-2 ( "Count_fibonacii_series" == given number)
 
 # num = int(input('Enter a number : '))
 # n1 , n2 = 0 ,1
@@ -17,7 +26,7 @@
 # for i in range(1 , num+1):
 #     n1 , n2 = n2 , n1+n2
 #     fibo.append(n1)
-# print(f'The fibonacii sxeries of given nummber {num} is : {fibo})
+# print(f'The fibonacii sxeries of given nummber {num} is : {fibo}')
 
 
 #Approach of fibonacci's series

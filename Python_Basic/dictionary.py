@@ -316,22 +316,80 @@
 
 # Dictionary to find mirror characters in a string
 # ->  mirror characters are reverse of original alphabet order
-def mirror_characters(strr,N):
-    if strr.strip() == "" or N<0:
-        return None
+# def mirror_characters(strr,N):
+#     if strr.strip() == "" or N<0:
+#         return None
     
-    alphachar = 'abcdefghijklmnopqrstuvwxyz'
-    revchar = alphachar[::-1]
+#     alphachar = 'abcdefghijklmnopqrstuvwxyz'
+#     revchar = alphachar[::-1]
     
-    dictchar = dict(zip(alphachar,revchar))  #dictionary create of mirror values
+#     dictchar = dict(zip(alphachar,revchar))  #dictionary create of mirror values
     
-    prefix = strr[:N-1]
-    surfix = strr[N-1:]
+#     prefix = strr[:N-1]
+#     surfix = strr[N-1:]
     
-    mirror = prefix
-    for i in range(len(surfix)):
-        mirror += dictchar[surfix[i]]
+#     mirror = prefix
+#     for i in range(len(surfix)):
+#         mirror += dictchar[surfix[i]]
         
-    return mirror
-print(mirror_characters('zolp',1))
+#     return mirror
+# print(mirror_characters('zolp',1))
 
+
+
+# li = [('python','pythonic'),('getter','setter')]
+# print(dict(li))
+
+# def frequency(li):
+#     if not li:
+#         return None
+    
+#     count = {}
+#     for i in li:
+#         count[i] = count.get(i,0)+1
+#     re = [k for k,v in count.items() if v>1]
+#     print(re)
+# frequency(['getter','setter','getter','setter','decorator','wrap'])
+
+
+# Counter and Dictionary Intersection Example (Make a string using deletion and rearrangement)
+from collections import Counter
+def count(s1,s2):
+    if s1.strip() == '' or s2.strip() == '':
+        return None
+  
+  
+    # return not(Counter(s1)-Counter(s2))#Working flow-> if s1 matches to all characters with s2 it become True(say:empty= False  so not(empty) that is  not(False)= True)
+    missing = Counter(s1) - Counter(s2)
+    return missing == 0
+    # count_1 = Counter(s1)
+    # count_2 = Counter(s2)
+    
+    # for k in count_1.keys():
+    #     if count_1[k]  > count_2.get(k,0):
+    #         return False
+        
+    # return True
+
+    
+    
+    # Method-I
+    # for ch in s1:
+    #     if ch not in s2:
+    #         return False
+    # return True
+    # Method-II
+    # re = ["_"]*len(s1)
+    # for i in range(len(s1)):
+    #     for j in range(len(s2)):
+    #         if s1[i] == s2[j]:
+    #             re[i] = s2[j]
+    #             break
+    # return ''.join(re) == s1
+
+s1 ='Python'.lower()
+s2 = 'aspwitnomfswmyygfph'
+if (count(s1,s2)):
+    print("It is possible")
+else:
+    print("It is not possible")

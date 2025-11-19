@@ -70,23 +70,6 @@
 #   print(f"The subarray of {target} from", sub_array(arr,target))
 
 
-
-
-
-
-
-
-#k=[1,5,7,8]
-
-
-#
-
-
-
-#a=8
-
-
-
 #def duck(arg):
 #    iter(arg)
 #    return True

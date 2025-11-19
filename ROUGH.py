@@ -44,7 +44,7 @@
 # print(var)
 
 # import this
-li = [4,5,8,3,1,2]
+# li = [4,5,8,3,1,2]
 # q = li.pop(3)
 # li.insert(4,9)
 # li.remove(4)
@@ -97,5 +97,21 @@ li = [4,5,8,3,1,2]
 # a = 50.00//2
 # print(a)
 
-from cap.Guess import run
-run()
+# from cap.Guess import run
+# run()
+
+
+# n = [1,2]
+# li = [['Data','Proposal'],
+#       ['Security','Encryption']
+#     ]
+
+# dic = {}
+# for i in range(len(li)):
+#     dic[n[i]] = li[i]
+# print(dic)
+
+
+
+s = 'BANANA'
+print(s.count('AN'))
