@@ -1,16 +1,13 @@
 class Workers:
     salary = 500
     bonusPoint = 1000
-    # def __init__(self,salary,bonusPoint):
-    #     self.sal = salary
-    #     self.bon = bonusPoint
     
     @classmethod
-    def get_change(cls):
-        # cls.bonusPoint = val
+    def get_change(cls,val):
+        cls.bonusPoint = val
         return cls.bonusPoint + cls.salary
 w = Workers()
-print(w.get_change())
+print(w.get_change(900))
 
 
 # class Increment(Workers):
