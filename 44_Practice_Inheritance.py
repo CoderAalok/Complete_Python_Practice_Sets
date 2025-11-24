@@ -126,39 +126,39 @@
 # print(a*b)
 
 # Method: II
-class Complex:
+# class Complex:
     
-    def __init__(self,re,img):
-        self.re = re
-        self.img = img
+#     def __init__(self,re,img):
+#         self.re = re
+#         self.img = img
     
-    def __add__(self,r):
+#     def __add__(self,r):
         
-        real = self.re+r.re
-        img = self.img+r.img
+#         real = self.re+r.re
+#         img = self.img+r.img
         
-        if img<0:
-            return f'{real}-{-img}i'
-        else:
-            return f'{real}+{img}i'
+#         if img<0:
+#             return f'{real}-{-img}i'
+#         else:
+#             return f'{real}+{img}i'
             
-    def __mul__(self,r):
+#     def __mul__(self,r):
         
-        mulreal = self.re*r.re - self.img*r.img
-        mulimg = self.re*r.img + self.img*r.re
+#         mulreal = self.re*r.re - self.img*r.img
+#         mulimg = self.re*r.img + self.img*r.re
         
-        if mulimg<0:
-            return f'{mulreal}-{-mulimg}i'
-        else:
-            return f'{mulreal}+{mulimg}i'
+#         if mulimg<0:
+#             return f'{mulreal}-{-mulimg}i'
+#         else:
+#             return f'{mulreal}+{mulimg}i'
 
 
 
-a = Complex(1,9)
-b = Complex(2,5)
+# a = Complex(1,9)
+# b = Complex(2,5)
 
-print(a+b)
-print(a*b)
+# print(a+b)
+# print(a*b)
 
 #-------------------------------------------------------------------------
 # Practice: 5
@@ -182,9 +182,9 @@ print(a*b)
 #         if len(self.vecA) != len(vecB.vecA):
 #             raise ValueError("Both vector must equal")
         
-#         dotprod = [self.vecA[i]*vecB.vecA[i] for i in range(len(self.vecA))]
+#         dotprod = sum([self.vecA[i]*vecB.vecA[i] for i in range(len(self.vecA))])
         
-#         return sum(dotprod)
+#         return dotprod
 
 #     def __len__(self):
 #         return len(self.vecA)
@@ -198,7 +198,7 @@ print(a*b)
 # print(f"Add of two vector: {vec1+vec2}")
 # print(f"Multiply of two vector: {vec1*vec2}")
 
-# print(f"Dimension of vector'A': {len(vec1)}D ")
+# print(f"Dimension of vector'A' and 'B': {len(vec1)}D ")
 
 #-------------------------------------------------------------------------
 
@@ -218,5 +218,8 @@ print(a*b)
 
 #-------------------------------------------------------------------------
 
-
+li = [3,2,4,5,2]
+# li[li.index(2)] -= 1
+li.remove(2)
+print(li)
 

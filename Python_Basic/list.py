@@ -21,9 +21,9 @@
 #z.reverse()
 #z.remove("RAG")
 
-a=[1,2,4,5,6]
-del a[0]
-print(a)
+# a=[1,2,4,5,6]
+# del a[0]
+# print(a)
 #i=0
 #z=len(a)
 #sum=0
@@ -36,3 +36,23 @@ print(a)
 #   i+=1
 #print(sum)
 #   
+
+
+
+# words = [ "go", "bat", "me", "eat", "goal", "boy", "run",'global' ] 
+# chars = [ 'e', 'o', 'b' ,'a', 'm', 'g', 'l' ] 
+
+# possible = []
+# for w in words:
+#         if all(ch in chars for ch in w):
+#             possible.append(w)
+            
+# print(' '.join(possible))
+
+li = [[9,8,3],[0,6,1]]
+# for i in range(len(li)):
+#     if 1 in li[i]:
+#         print("True",i)
+
+if [0,6,1] in [[9,8,3],[0,6,1]]:
+    print("True")

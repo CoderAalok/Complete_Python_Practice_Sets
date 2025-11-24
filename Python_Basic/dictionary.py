@@ -353,15 +353,15 @@
 
 
 # Counter and Dictionary Intersection Example (Make a string using deletion and rearrangement)
-from collections import Counter
-def count(s1,s2):
-    if s1.strip() == '' or s2.strip() == '':
-        return None
+# from collections import Counter
+# def count(s1,s2):
+#     if s1.strip() == '' or s2.strip() == '':
+#         return None
   
   
-    # return not(Counter(s1)-Counter(s2))#Working flow-> if s1 matches to all characters with s2 it become True(say:empty= False  so not(empty) that is  not(False)= True)
-    missing = Counter(s1) - Counter(s2)
-    return missing == 0
+#     # return not(Counter(s1)-Counter(s2))#Working flow-> if s1 matches to all characters with s2 it become True(say:empty= False  so not(empty) that is  not(False)= True)
+#     missing = Counter(s1) - Counter(s2)
+#     return missing == 0
     # count_1 = Counter(s1)
     # count_2 = Counter(s2)
     
@@ -387,9 +387,134 @@ def count(s1,s2):
     #             break
     # return ''.join(re) == s1
 
-s1 ='Python'.lower()
-s2 = 'aspwitnomfswmyygfph'
-if (count(s1,s2)):
-    print("It is possible")
-else:
-    print("It is not possible")
+# s1 ='Python'.lower()
+# s2 = 'pytoafgfn'
+
+# if all(s1 in s2 for s1 in s1):
+#     print(f"It is possible to make {s1} word {s2}")
+# else:
+#     print(f"It is not possible to make {s1} word from {s2}")
+
+# dictionary, set and counter to check if frequencies can become same
+
+# from collections import Counter
+
+# strr = "aabbb".lower()
+
+# count = Counter(strr)
+# freqs = list(count.values())
+# unique = list(set(freqs))
+
+# if len(unique) == 1:
+#     print("YES! It can be possible")
+
+# elif len(unique) == 2:
+#     f,s = unique
+    
+#     high = max(f,s)
+#     low = min(f,s)
+    
+#     # To check high frequency
+#     if freqs.count(high) == 1 or high-1 == low:
+#         print("YES! It can be possible")
+#     else:
+#         print("No! It can not be possible ")
+        
+# else:
+#     print("No! It can not be possible ")
+    
+    
+# Method: II
+
+# from collections import Counter
+
+# def possible_character(strr):
+#     # if strr.strip() == "":
+#     #     return None
+    
+#     count_freqs = Counter(strr)
+#     li_freqs = list(count_freqs.values())
+#     unique_freq = list(set(li_freqs))
+    
+#     if len(unique_freq) == 1:
+#         return True
+    
+#     # Main condition
+#     elif len(unique_freq) == 2:
+        
+#         high = max(unique_freq)
+#         low = min(unique_freq)
+        
+#         # Counting possible frequencies
+#         count_high = li_freqs.count(high)
+#         count_low = li_freqs.count(low)
+        
+#         if (high -1 == low  and count_high == 1) or (low - 1 == 0 and count_low==1):  #frequencies
+#             return True
+        
+#         else:
+#             return False
+
+#     else:
+#         return False
+
+# print(possible_character([0,1,0,1,0]))
+# print(possible_character('abbccd'))
+        
+
+
+
+
+# d = {'Even':['0','2','4'], "Odd":['1','3','5']}
+# val = list(d.values())
+# for i in val :
+#     print(i)
+
+# print([i for i in val])
+
+# print("  | ".join(d.keys()) )
+
+""" Expected Output:
+Even    Odd
+0        1
+2        3
+4        5
+
+"""
+
+#first print keys
+# for key in d.keys():
+#     print(f"{key:<15}",end='')
+# print()
+# print("title\\author\\Status")
+# #now print values
+# for i in range(len(val[0])):
+#     for value in val:
+#         print(f" {value[i]:<15}",end='')
+#     print()
+
+
+dic = {1:{"title":["The Programmer","Re-searcher in AI"]},
+       2:{"status":["available","unavailable"]}
+    }
+
+
+# dic = list(dic[1].keys())
+# print(dic)
+for i in range(1,len(dic)+1):
+    
+    for key in (dic[i].keys()):
+        print(key)
+        print("⁃"*8)
+    
+    
+    
+# re = dic[1]
+# for key in re.keys():
+#     print(f"{key:>10}",end=' ')
+# print()
+
+# for val in (list(re.values())[0]):
+#     print(f"• {val:<15}")
+
+# dic[len(dic)+1] = {'author':['Basant',"RD"]}
