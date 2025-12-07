@@ -1,5 +1,5 @@
 
-
+# N-Dimension Vector
 import numpy as np
 class Vector:
     def __init__(self,vec1,pi=0.5):
