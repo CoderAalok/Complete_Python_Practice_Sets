@@ -216,13 +216,15 @@
 
 
 
-s1 = 'encapsulation'
-s2 = 'abstraction'
-count = 0
-ch = []
-for i in s1:
-    if i in  s2 and i not in ch:
-        count += 1
-        ch.append(i)
-print(f"Here the pair no. of strings -> {count} and {ch}")
+# s1 = 'encapsulation'
+# s2 = 'abstraction'
+# count = 0
+# ch = []
+# for i in s1:
+#     if i in  s2 and i not in ch:
+#         count += 1
+#         ch.append(i)
+# print(f"Here the pair no. of strings -> {count} and {ch}")
 
+format_strr = "AI is {0} changing the world. ".format("powerful which")
+print(format_strr)

@@ -14,3 +14,22 @@ for _ in range(t):
         return ans
     result = sumNumber(3) + sumNumber(5) - sumNumber(15)#->> twice avoid ((a) + (b) - (a*b))
     print(result)
+    
+    
+def sum_natural(n, k):
+    n = (n)//k
+    sum_N = k*(n*(n+1))//2
+    return sum_N
+
+# No. of test
+test = int(input()) 
+
+
+for _ in range(test):
+    # n -> Natural number
+    n = int(input().strip())
+    # k -> Divisible number
+    # k = int(input().strip())
+    
+    total_sum = sum_natural(n, 3) + sum_natural(n, 5) - sum_natural(n, 15)
+    print(total_sum)
