@@ -10,5 +10,3 @@ def threesum(nums):
     return [list(i) for i in re]
 print(threesum([-1,0,1,2,-1,-4]))
 #Too slow -> Time Complexity: O(n^3)
-
-
