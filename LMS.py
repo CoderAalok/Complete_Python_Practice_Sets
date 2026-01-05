@@ -21,7 +21,7 @@ def write_file(filename, _data_):
 class User:
     # user details
     filename = "Auth.json"
-    
+    @classmethod
     def new_register(cls, name, userid, password, address, contact):
         new_data = load_file(cls.filename)
 
